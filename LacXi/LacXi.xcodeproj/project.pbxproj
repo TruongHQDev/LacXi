@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2563331198C247F744A13645 /* Pods_LacXi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5CD85006D005634A972B61A /* Pods_LacXi.framework */; };
 		A3F1699E25C4142400A4AF11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F1699D25C4142400A4AF11 /* AppDelegate.swift */; };
 		A3F169A025C4142400A4AF11 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F1699F25C4142400A4AF11 /* SceneDelegate.swift */; };
 		A3F169A225C4142400A4AF11 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F169A125C4142400A4AF11 /* ViewController.swift */; };
@@ -24,6 +25,9 @@
 		A3F169A625C4142700A4AF11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A3F169A925C4142700A4AF11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A3F169AB25C4142700A4AF11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5C7030480DF1B053707F451 /* Pods-LacXi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LacXi.debug.xcconfig"; path = "Target Support Files/Pods-LacXi/Pods-LacXi.debug.xcconfig"; sourceTree = "<group>"; };
+		E134242BF851FD1A87866D03 /* Pods-LacXi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LacXi.release.xcconfig"; path = "Target Support Files/Pods-LacXi/Pods-LacXi.release.xcconfig"; sourceTree = "<group>"; };
+		E5CD85006D005634A972B61A /* Pods_LacXi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LacXi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2563331198C247F744A13645 /* Pods_LacXi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B69F63E4002DEA46A5B0D11 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C5C7030480DF1B053707F451 /* Pods-LacXi.debug.xcconfig */,
+				E134242BF851FD1A87866D03 /* Pods-LacXi.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A3F1699125C4142300A4AF11 = {
 			isa = PBXGroup;
 			children = (
 				A3F1699C25C4142300A4AF11 /* LacXi */,
 				A3F1699B25C4142300A4AF11 /* Products */,
+				3B69F63E4002DEA46A5B0D11 /* Pods */,
+				DFC6F6F2DCB1D9CDAFF1B324 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +84,14 @@
 			path = LacXi;
 			sourceTree = "<group>";
 		};
+		DFC6F6F2DCB1D9CDAFF1B324 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E5CD85006D005634A972B61A /* Pods_LacXi.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,6 +99,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A3F169AE25C4142700A4AF11 /* Build configuration list for PBXNativeTarget "LacXi" */;
 			buildPhases = (
+				72A4221B04D2282188B20062 /* [CP] Check Pods Manifest.lock */,
 				A3F1699625C4142300A4AF11 /* Sources */,
 				A3F1699725C4142300A4AF11 /* Frameworks */,
 				A3F1699825C4142300A4AF11 /* Resources */,
@@ -131,6 +157,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		72A4221B04D2282188B20062 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LacXi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A3F1699625C4142300A4AF11 /* Sources */ = {
@@ -283,6 +334,7 @@
 		};
 		A3F169AF25C4142700A4AF11 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5C7030480DF1B053707F451 /* Pods-LacXi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -303,6 +355,7 @@
 		};
 		A3F169B025C4142700A4AF11 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E134242BF851FD1A87866D03 /* Pods-LacXi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
