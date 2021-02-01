@@ -14,6 +14,7 @@
 		A3F169A525C4142400A4AF11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3F169A325C4142400A4AF11 /* Main.storyboard */; };
 		A3F169A725C4142700A4AF11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3F169A625C4142700A4AF11 /* Assets.xcassets */; };
 		A3F169AA25C4142700A4AF11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3F169A825C4142700A4AF11 /* LaunchScreen.storyboard */; };
+		A3F169BB25C7FFFA00A4AF11 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F169BA25C7FFFA00A4AF11 /* SettingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		A3F169A625C4142700A4AF11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A3F169A925C4142700A4AF11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A3F169AB25C4142700A4AF11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3F169BA25C7FFFA00A4AF11 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		C5C7030480DF1B053707F451 /* Pods-LacXi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LacXi.debug.xcconfig"; path = "Target Support Files/Pods-LacXi/Pods-LacXi.debug.xcconfig"; sourceTree = "<group>"; };
 		E134242BF851FD1A87866D03 /* Pods-LacXi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LacXi.release.xcconfig"; path = "Target Support Files/Pods-LacXi/Pods-LacXi.release.xcconfig"; sourceTree = "<group>"; };
 		E5CD85006D005634A972B61A /* Pods_LacXi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LacXi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,7 +50,6 @@
 				C5C7030480DF1B053707F451 /* Pods-LacXi.debug.xcconfig */,
 				E134242BF851FD1A87866D03 /* Pods-LacXi.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -80,6 +81,7 @@
 				A3F169A625C4142700A4AF11 /* Assets.xcassets */,
 				A3F169A825C4142700A4AF11 /* LaunchScreen.storyboard */,
 				A3F169AB25C4142700A4AF11 /* Info.plist */,
+				A3F169BA25C7FFFA00A4AF11 /* SettingViewController.swift */,
 			);
 			path = LacXi;
 			sourceTree = "<group>";
@@ -191,6 +193,7 @@
 				A3F169A225C4142400A4AF11 /* ViewController.swift in Sources */,
 				A3F1699E25C4142400A4AF11 /* AppDelegate.swift in Sources */,
 				A3F169A025C4142400A4AF11 /* SceneDelegate.swift in Sources */,
+				A3F169BB25C7FFFA00A4AF11 /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
