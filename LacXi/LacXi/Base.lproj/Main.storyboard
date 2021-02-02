@@ -74,7 +74,7 @@
                                     <constraint firstAttribute="width" secondItem="P6E-h9-iAL" secondAttribute="height" id="Pxi-VV-Ryc"/>
                                 </constraints>
                             </view>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dgv-OW-dzD" userLabel="vwCongrat">
+                            <view hidden="YES" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dgv-OW-dzD" userLabel="vwCongrat">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bp4-3T-Is6" userLabel="lbCongrat">
@@ -93,7 +93,7 @@
                                             <constraint firstAttribute="width" secondItem="Rmm-RP-maB" secondAttribute="height" id="i3k-HS-t5V"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wLa-iT-gFZ" userLabel="MoneyOutput">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wLa-iT-gFZ" userLabel="MoneyResult">
                                         <rect key="frame" x="67.5" y="360" width="240" height="200"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -160,6 +160,19 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dgv-OW-dzD" secondAttribute="bottom" id="r9Q-k3-vbB"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnReset" destination="tCS-IK-kcR" id="c1y-Az-VKd"/>
+                        <outlet property="vwBack" destination="opg-qk-C4Z" id="5SV-If-Nau"/>
+                        <outlet property="vwCapture" destination="xrN-j8-BPV" id="Cce-aG-E0t"/>
+                        <outlet property="vwCenter" destination="P6E-h9-iAL" id="23s-AJ-9bh"/>
+                        <outlet property="vwCongrat" destination="dgv-OW-dzD" id="P1B-em-5He"/>
+                        <outlet property="vwLbCongrat" destination="Bp4-3T-Is6" id="vyz-wH-8aG"/>
+                        <outlet property="vwMoneyResultt" destination="wLa-iT-gFZ" id="e9n-yj-4cL"/>
+                        <outlet property="vwReset" destination="XMS-rI-dkJ" id="JsB-D3-cnL"/>
+                        <outlet property="vwSelfieImage" destination="Rmm-RP-maB" id="ne3-Bd-PlI"/>
+                        <outlet property="vwShare" destination="Xwi-c2-cQL" id="P7I-8p-ocH"/>
+                        <outlet property="vwToSetting" destination="IW1-Bh-Vga" id="TyE-u3-HER"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -310,6 +323,18 @@
                             <constraint firstItem="9Cr-Kr-dFQ" firstAttribute="bottom" secondItem="V3e-2R-VTV" secondAttribute="bottom" constant="50" id="xEN-yg-x3k"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnSave" destination="CNi-mC-8Iz" id="A8R-Hz-I4M"/>
+                        <outlet property="segmentTypeRandom" destination="hMy-ls-Rx5" id="Nwl-8p-RdV"/>
+                        <outlet property="txtMaximum" destination="ZQr-7x-3yC" id="F2i-c9-xpK"/>
+                        <outlet property="txtMinimum" destination="Pvz-j9-Vpb" id="fyv-tU-BGK"/>
+                        <outlet property="vwCenter" destination="c2v-ie-FkG" id="6x8-tH-ytk"/>
+                        <outlet property="vwMaximumSetting" destination="CPg-ZV-OWC" id="tFI-fJ-kUj"/>
+                        <outlet property="vwMinimumSetting" destination="SMK-5E-Z5G" id="1yv-iO-unb"/>
+                        <outlet property="vwSave" destination="V3e-2R-VTV" id="W4T-DG-vM8"/>
+                        <outlet property="vwTop" destination="n9j-b0-GHx" id="d4y-N2-Kle"/>
+                        <outlet property="vwTypeRandom" destination="gen-fS-VYm" id="U0u-B2-ecP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RUX-Um-Akt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
