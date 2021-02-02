@@ -41,6 +41,7 @@ class ViewController: UIViewController {
         _ = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard?.instantiateViewController(withIdentifier: "SettingViewController") as! SettingViewController
         controller.settingDelegate = self
+        
         self.present(controller, animated: true, completion: nil)
         
     }
@@ -74,7 +75,7 @@ class ViewController: UIViewController {
     }
     
     func addTime(num: Int) -> Double {
-        return 6.0
+        return 0.0
     }
     
     func resetToShake() {
