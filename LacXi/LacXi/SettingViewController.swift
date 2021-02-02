@@ -23,10 +23,18 @@ class SettingViewController: UIViewController {
     @IBOutlet weak var vwSave: UIView!
     @IBOutlet weak var btnSave: UIButton!
     
+    var settingDelegate: SettingDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-
+    @IBAction func segmentChange(_ sender: Any) {
+        
+    }
+    
+    @IBAction func saveTapped(_ sender: Any) {
+        
+    }
+    
 }

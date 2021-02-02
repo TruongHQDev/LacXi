@@ -26,6 +26,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LOE-rO-SZu">
                                                 <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="settingTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j9E-fK-ept"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemPinkColor"/>
@@ -55,6 +58,9 @@
                                         <state key="normal" title="Reset">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="resetTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wkP-ke-7CV"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
@@ -276,6 +282,9 @@
                                             <segment title="Even"/>
                                             <segment title="Odd"/>
                                         </segments>
+                                        <connections>
+                                            <action selector="segmentChange:" destination="ukO-Ro-DM9" eventType="valueChanged" id="ibm-oF-NgC"/>
+                                        </connections>
                                     </segmentedControl>
                                 </subviews>
                                 <constraints>
@@ -294,6 +303,9 @@
                                         <state key="normal" title="Save">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="saveTapped:" destination="ukO-Ro-DM9" eventType="touchUpInside" id="LJF-WD-pLY"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="linkColor"/>
