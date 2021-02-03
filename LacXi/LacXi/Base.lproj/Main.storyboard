@@ -106,10 +106,19 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rmm-RP-maB" userLabel="SelfieImage">
                                         <rect key="frame" x="87.5" y="140" width="200" height="200"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BJl-5b-PDW">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                            </imageView>
+                                        </subviews>
                                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="BJl-5b-PDW" secondAttribute="trailing" id="5qy-t2-Wbn"/>
+                                            <constraint firstItem="BJl-5b-PDW" firstAttribute="leading" secondItem="Rmm-RP-maB" secondAttribute="leading" id="9o8-Fx-yRU"/>
                                             <constraint firstAttribute="width" constant="200" id="S1a-gj-iHu"/>
+                                            <constraint firstAttribute="bottom" secondItem="BJl-5b-PDW" secondAttribute="bottom" id="TEl-dZ-Bme"/>
                                             <constraint firstAttribute="width" secondItem="Rmm-RP-maB" secondAttribute="height" id="i3k-HS-t5V"/>
+                                            <constraint firstItem="BJl-5b-PDW" firstAttribute="top" secondItem="Rmm-RP-maB" secondAttribute="top" id="lih-HZ-icm"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wLa-iT-gFZ" userLabel="MoneyResult">
@@ -134,10 +143,22 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xrN-j8-BPV" userLabel="Capture">
                                         <rect key="frame" x="162.5" y="577" width="50" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MpV-Ua-jFq">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <connections>
+                                                    <action selector="captureTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5RK-Xh-SnO"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="JDf-Xx-PRd"/>
+                                            <constraint firstItem="MpV-Ua-jFq" firstAttribute="leading" secondItem="xrN-j8-BPV" secondAttribute="leading" id="R5Y-gM-62v"/>
+                                            <constraint firstAttribute="bottom" secondItem="MpV-Ua-jFq" secondAttribute="bottom" id="eOc-n6-Kza"/>
                                             <constraint firstAttribute="height" constant="50" id="hsI-kV-aB6"/>
+                                            <constraint firstAttribute="trailing" secondItem="MpV-Ua-jFq" secondAttribute="trailing" id="jUx-kI-hvP"/>
+                                            <constraint firstItem="MpV-Ua-jFq" firstAttribute="top" secondItem="xrN-j8-BPV" secondAttribute="top" id="pEE-l9-Vj0"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="opg-qk-C4Z" userLabel="Back">
@@ -218,7 +239,9 @@
                     </view>
                     <connections>
                         <outlet property="btnBack" destination="ckc-x1-OHf" id="dnx-yS-si4"/>
+                        <outlet property="btnCapture" destination="MpV-Ua-jFq" id="9id-6x-tXB"/>
                         <outlet property="btnReset" destination="tCS-IK-kcR" id="c1y-Az-VKd"/>
+                        <outlet property="imgSelfie" destination="BJl-5b-PDW" id="CTe-tn-0iU"/>
                         <outlet property="lbCongratBot" destination="S4V-2s-MZj" id="MAS-8S-AFI"/>
                         <outlet property="lbCongratTop" destination="Qgw-YF-hZM" id="fz7-mJ-4Hs"/>
                         <outlet property="vwBack" destination="opg-qk-C4Z" id="5SV-If-Nau"/>
