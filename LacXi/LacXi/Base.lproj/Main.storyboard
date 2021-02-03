@@ -89,12 +89,12 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qgw-YF-hZM">
                                                 <rect key="frame" x="0.0" y="0.0" width="240" height="50"/>
-                                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="26"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="Qgw-YF-hZM" secondAttribute="trailing" id="JAX-19-LUA"/>
                                             <constraint firstAttribute="width" constant="240" id="WOo-dj-d2U"/>
@@ -117,12 +117,12 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S4V-2s-MZj">
                                                 <rect key="frame" x="0.0" y="0.0" width="240" height="200"/>
-                                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="30"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="S4V-2s-MZj" secondAttribute="bottom" id="4JI-0S-nvi"/>
                                             <constraint firstItem="S4V-2s-MZj" firstAttribute="top" secondItem="wLa-iT-gFZ" secondAttribute="top" id="IZo-Gx-hPc"/>
@@ -143,9 +143,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="opg-qk-C4Z" userLabel="Back">
                                         <rect key="frame" x="20" y="597" width="50" height="50"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ckc-x1-OHf">
-                                                <rect key="frame" x="8" y="10" width="34" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ckc-x1-OHf">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
                                                 <state key="normal" title="Back"/>
                                                 <connections>
@@ -156,15 +155,30 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="5Xt-LG-wIV"/>
+                                            <constraint firstAttribute="bottom" secondItem="ckc-x1-OHf" secondAttribute="bottom" id="66p-j4-3G4"/>
                                             <constraint firstAttribute="height" constant="50" id="Njk-Fp-thg"/>
+                                            <constraint firstItem="ckc-x1-OHf" firstAttribute="leading" secondItem="opg-qk-C4Z" secondAttribute="leading" id="ZOs-88-DFB"/>
+                                            <constraint firstItem="ckc-x1-OHf" firstAttribute="top" secondItem="opg-qk-C4Z" secondAttribute="top" id="jon-QU-6z4"/>
+                                            <constraint firstAttribute="trailing" secondItem="ckc-x1-OHf" secondAttribute="trailing" id="ryw-J1-Ejf"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xwi-c2-cQL" userLabel="Share">
                                         <rect key="frame" x="305" y="597" width="50" height="50"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pgr-Cf-RqY">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="share"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="Pgr-Cf-RqY" firstAttribute="leading" secondItem="Xwi-c2-cQL" secondAttribute="leading" id="MoX-Dc-yWE"/>
                                             <constraint firstAttribute="width" constant="50" id="QfZ-6s-Td8"/>
+                                            <constraint firstAttribute="bottom" secondItem="Pgr-Cf-RqY" secondAttribute="bottom" id="TwR-2a-nXk"/>
                                             <constraint firstAttribute="height" constant="50" id="cT4-fC-z38"/>
+                                            <constraint firstAttribute="trailing" secondItem="Pgr-Cf-RqY" secondAttribute="trailing" id="fpS-eS-4CN"/>
+                                            <constraint firstItem="Pgr-Cf-RqY" firstAttribute="top" secondItem="Xwi-c2-cQL" secondAttribute="top" id="sPZ-qy-zpR"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -394,6 +408,7 @@
     </scenes>
     <resources>
         <image name="setting" width="512" height="512"/>
+        <image name="share" width="512" height="512"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
