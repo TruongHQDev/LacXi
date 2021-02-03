@@ -19,13 +19,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var vwLbCongrat: UIView!
     @IBOutlet weak var vwSelfieImage: UIView!
     @IBOutlet weak var vwMoneyResultt: UIView!
+    @IBOutlet weak var lbCongratTop: UILabel!
+    @IBOutlet weak var lbCongratBot: UILabel!
     
     @IBOutlet weak var vwCapture: UIView!
     @IBOutlet weak var vwBack: UIView!
+    @IBOutlet weak var btnBack: UIButton!
     @IBOutlet weak var vwShare: UIView!
     
     var minimum = 0
-    var maximum = 0
+    var maximum = 4
     var type: RandomType = .even
     var isShaking = false
     
@@ -46,15 +49,22 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func backTapped(_ sender: Any) {
+        resetToShake()
+    }
+    
     override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
             if isShaking { return }
             print("start")
             let temp = self.runRandom(minimum: minimum, maximum: maximum, type: type)
             DispatchQueue.main.asyncAfter(deadline: .now() + addTime(num: 5)) { // Change `2.0` to the desired number of seconds.
-                self.isShaking = false
                 
-                print("value: \(temp)")
+                let strTop = "CHÚC MỪNG!!!"
+                let strBot = "Bạn đã nhận được\n\(temp)đ\nTừ Quang Trường"
+                self.lbCongratTop.text = strTop
+                self.lbCongratBot.text = strBot
+                self.showCongrat()
             }
         }
     }
@@ -79,8 +89,7 @@ class ViewController: UIViewController {
     }
     
     func resetToShake() {
-        isShaking = false
-        
+        hideCongrat()
         //reset layout
         
     }
@@ -94,5 +103,17 @@ extension ViewController: SettingDelegate {
         
         //reset
         resetToShake()
+    }
+    
+    func hideCongrat() {
+        vwCongrat.alpha = 0
+        lbCongratBot.text = ""
+        lbCongratTop.text = ""
+        isShaking = false
+    }
+    
+    func showCongrat() {
+        vwCongrat.alpha = 1
+        isShaking = true
     }
 }
