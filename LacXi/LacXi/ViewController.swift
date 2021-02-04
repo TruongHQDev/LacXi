@@ -49,6 +49,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupLayout()
         setupCaptureSession()
         setupDevice()
         setupInputOutput()
@@ -76,6 +77,7 @@ class ViewController: UIViewController {
         if isCaptured {
             imgSelfie.image = UIImage(named: "")
             isCaptured = false
+            vwSelfieImage.isHidden = false
             startRunningCaptureSession()
         } else {
             let settings = AVCapturePhotoSettings()
@@ -149,11 +151,17 @@ extension ViewController: SettingDelegate {
         lbCongratBot.text = ""
         lbCongratTop.text = ""
         isShaking = false
+        isCaptured = false
+        imgSelfie.image = UIImage(named: "")
+        
+        
     }
     
     func showCongrat() {
         vwCongrat.alpha = 1
         isShaking = true
+        vwSelfieImage.isHidden = false
+        startRunningCaptureSession()
     }
 }
 
@@ -205,6 +213,16 @@ extension ViewController {
     func stopRunningCaptureSession() {
         captureSession.stopRunning()
     }
+    
+    func hidePreviewLayer() {
+        vwSelfieImage.layer.isHidden = true
+    }
+    
+    func setupLayout() {
+        vwSelfieImage.layer.cornerRadius = vwSelfieImage.frame.size.height / 2
+        imgSelfie.frame = vwSelfieImage.frame
+        imgSelfie.layer.cornerRadius = imgSelfie.frame.size.height / 2
+    }
 }
 
 extension ViewController: AVCapturePhotoCaptureDelegate {
@@ -223,6 +241,7 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
             isCaptured = true
             DispatchQueue.main.async {
                 self.imgSelfie.image = self.image
+                self.vwSelfieImage.isHidden = true
             }
         }
     }

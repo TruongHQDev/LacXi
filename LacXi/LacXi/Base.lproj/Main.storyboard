@@ -55,7 +55,7 @@
                                     <constraint firstAttribute="height" constant="50" id="xp0-aO-qyT"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XMS-rI-dkJ">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XMS-rI-dkJ">
                                 <rect key="frame" x="112.5" y="503.5" width="150" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCS-IK-kcR">
@@ -111,21 +111,16 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rmm-RP-maB" userLabel="SelfieImage">
                                         <rect key="frame" x="87.5" y="140" width="200" height="200"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BJl-5b-PDW">
-                                                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
-                                            </imageView>
-                                        </subviews>
                                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="BJl-5b-PDW" secondAttribute="trailing" id="5qy-t2-Wbn"/>
-                                            <constraint firstItem="BJl-5b-PDW" firstAttribute="leading" secondItem="Rmm-RP-maB" secondAttribute="leading" id="9o8-Fx-yRU"/>
                                             <constraint firstAttribute="width" constant="200" id="S1a-gj-iHu"/>
-                                            <constraint firstAttribute="bottom" secondItem="BJl-5b-PDW" secondAttribute="bottom" id="TEl-dZ-Bme"/>
                                             <constraint firstAttribute="width" secondItem="Rmm-RP-maB" secondAttribute="height" id="i3k-HS-t5V"/>
-                                            <constraint firstItem="BJl-5b-PDW" firstAttribute="top" secondItem="Rmm-RP-maB" secondAttribute="top" id="lih-HZ-icm"/>
                                         </constraints>
                                     </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BJl-5b-PDW">
+                                        <rect key="frame" x="87" y="233" width="200" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wLa-iT-gFZ" userLabel="MoneyResult">
                                         <rect key="frame" x="67.5" y="360" width="240" height="200"/>
                                         <subviews>
