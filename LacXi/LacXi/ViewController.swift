@@ -100,7 +100,7 @@ class ViewController: UIViewController {
             DispatchQueue.main.asyncAfter(deadline: .now() + addTime(num: 5)) { // Change `2.0` to the desired number of seconds.
                 
                 let strTop = "CHÚC MỪNG!!!"
-                let strBot = "Bạn đã nhận được\n\(temp)đ\nTừ Quang Trường"
+                let strBot = "Bạn đã nhận được\n\(temp)đ\ntừ Quang Trường"
                 self.lbCongratTop.text = strTop
                 self.lbCongratBot.text = strBot
                 self.showCongrat()
