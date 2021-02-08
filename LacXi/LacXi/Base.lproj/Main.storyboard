@@ -86,6 +86,23 @@
                                     <constraint firstAttribute="width" secondItem="P6E-h9-iAL" secondAttribute="height" id="Pxi-VV-Ryc"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0wE-O0-iBa">
+                                <rect key="frame" x="162.5" y="473.5" width="50" height="50"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shakeIcon" translatesAutoresizingMaskIntoConstraints="NO" id="QnX-xX-ktQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="9vG-5F-SPS"/>
+                                    <constraint firstItem="QnX-xX-ktQ" firstAttribute="leading" secondItem="0wE-O0-iBa" secondAttribute="leading" id="CUG-0L-AGO"/>
+                                    <constraint firstAttribute="trailing" secondItem="QnX-xX-ktQ" secondAttribute="trailing" id="EMp-Zb-Iux"/>
+                                    <constraint firstAttribute="bottom" secondItem="QnX-xX-ktQ" secondAttribute="bottom" id="FZy-CT-8WU"/>
+                                    <constraint firstItem="QnX-xX-ktQ" firstAttribute="top" secondItem="0wE-O0-iBa" secondAttribute="top" id="Hma-x7-nOa"/>
+                                    <constraint firstAttribute="height" constant="50" id="Xn2-OG-eYS"/>
+                                </constraints>
+                            </view>
                             <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dgv-OW-dzD" userLabel="vwCongrat">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
@@ -244,6 +261,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="0wE-O0-iBa" firstAttribute="top" secondItem="P6E-h9-iAL" secondAttribute="bottom" constant="20" id="34r-om-SzF"/>
                             <constraint firstItem="XMS-rI-dkJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4gG-Ma-VSo"/>
                             <constraint firstItem="dgv-OW-dzD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="A9U-Dv-3o2"/>
                             <constraint firstAttribute="trailing" secondItem="3aT-Qm-Pd3" secondAttribute="trailing" id="Cy5-U8-l7b"/>
@@ -252,6 +270,7 @@
                             <constraint firstItem="P6E-h9-iAL" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.64" id="XUj-s6-zL2"/>
                             <constraint firstAttribute="trailing" secondItem="dgv-OW-dzD" secondAttribute="trailing" id="gpQ-Iu-Dvp"/>
                             <constraint firstItem="XMS-rI-dkJ" firstAttribute="top" secondItem="P6E-h9-iAL" secondAttribute="bottom" constant="50" id="iIb-CL-nHI"/>
+                            <constraint firstItem="0wE-O0-iBa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kWB-kJ-i1P"/>
                             <constraint firstItem="P6E-h9-iAL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lLU-8P-sDD"/>
                             <constraint firstItem="dgv-OW-dzD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="mgr-sn-WIQ"/>
                             <constraint firstItem="P6E-h9-iAL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oRp-vP-XqR"/>
@@ -454,6 +473,7 @@
     </scenes>
     <resources>
         <image name="setting" width="512" height="512"/>
+        <image name="shakeIcon" width="200" height="200"/>
         <image name="share" width="512" height="512"/>
         <image name="test" width="632" height="640"/>
         <systemColor name="linkColor">
