@@ -18,7 +18,7 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="ViewController" modalPresentationStyle="overFullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="LacXi" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -89,6 +89,21 @@
                             <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dgv-OW-dzD" userLabel="vwCongrat">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="21F-YB-WSf">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test" translatesAutoresizingMaskIntoConstraints="NO" id="LWP-BE-Jb1">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="LWP-BE-Jb1" firstAttribute="top" secondItem="21F-YB-WSf" secondAttribute="top" id="35x-JS-zpM"/>
+                                            <constraint firstAttribute="trailing" secondItem="LWP-BE-Jb1" secondAttribute="trailing" id="ZTi-xz-lHO"/>
+                                            <constraint firstItem="LWP-BE-Jb1" firstAttribute="leading" secondItem="21F-YB-WSf" secondAttribute="leading" id="bNb-67-G1G"/>
+                                            <constraint firstAttribute="bottom" secondItem="LWP-BE-Jb1" secondAttribute="bottom" id="tnu-T9-oUl"/>
+                                        </constraints>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bp4-3T-Is6" userLabel="lbCongrat">
                                         <rect key="frame" x="67.5" y="70" width="240" height="50"/>
                                         <subviews>
@@ -190,6 +205,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="share"/>
+                                                <connections>
+                                                    <action selector="shareTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uob-Ju-l1v"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -203,48 +221,53 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="21F-YB-WSf" firstAttribute="top" secondItem="dgv-OW-dzD" secondAttribute="top" id="48U-R2-V2C"/>
                                     <constraint firstAttribute="bottom" secondItem="Xwi-c2-cQL" secondAttribute="bottom" constant="20" id="9Nx-Oq-sM9"/>
                                     <constraint firstItem="opg-qk-C4Z" firstAttribute="leading" secondItem="dgv-OW-dzD" secondAttribute="leading" constant="20" id="9b2-5r-6Cm"/>
+                                    <constraint firstAttribute="bottom" secondItem="21F-YB-WSf" secondAttribute="bottom" id="GIY-bQ-dX5"/>
                                     <constraint firstItem="Rmm-RP-maB" firstAttribute="top" secondItem="dgv-OW-dzD" secondAttribute="top" constant="140" id="GRG-p5-aLC"/>
                                     <constraint firstItem="Bp4-3T-Is6" firstAttribute="centerX" secondItem="dgv-OW-dzD" secondAttribute="centerX" id="SIB-gW-L3f"/>
                                     <constraint firstItem="xrN-j8-BPV" firstAttribute="centerX" secondItem="dgv-OW-dzD" secondAttribute="centerX" id="T2W-cl-LYe"/>
                                     <constraint firstAttribute="bottom" secondItem="opg-qk-C4Z" secondAttribute="bottom" constant="20" id="TAG-YW-Qoi"/>
                                     <constraint firstAttribute="bottom" secondItem="xrN-j8-BPV" secondAttribute="bottom" constant="40" id="Ukd-U2-zfW"/>
                                     <constraint firstItem="Rmm-RP-maB" firstAttribute="top" secondItem="Bp4-3T-Is6" secondAttribute="bottom" constant="20" id="ZV3-eO-ces"/>
+                                    <constraint firstItem="21F-YB-WSf" firstAttribute="leading" secondItem="dgv-OW-dzD" secondAttribute="leading" id="bkn-X9-jUM"/>
                                     <constraint firstAttribute="trailing" secondItem="Xwi-c2-cQL" secondAttribute="trailing" constant="20" id="kIz-Tb-rmC"/>
                                     <constraint firstItem="wLa-iT-gFZ" firstAttribute="centerX" secondItem="dgv-OW-dzD" secondAttribute="centerX" id="r65-tb-xa6"/>
                                     <constraint firstItem="wLa-iT-gFZ" firstAttribute="top" secondItem="Rmm-RP-maB" secondAttribute="bottom" constant="20" id="uDK-NV-cJM"/>
+                                    <constraint firstAttribute="trailing" secondItem="21F-YB-WSf" secondAttribute="trailing" id="vHg-Fc-BVB"/>
                                     <constraint firstItem="Rmm-RP-maB" firstAttribute="centerX" secondItem="dgv-OW-dzD" secondAttribute="centerX" id="vPZ-qK-Nzj"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="XMS-rI-dkJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4gG-Ma-VSo"/>
-                            <constraint firstItem="dgv-OW-dzD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="A9U-Dv-3o2"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3aT-Qm-Pd3" secondAttribute="trailing" id="Cy5-U8-l7b"/>
-                            <constraint firstItem="3aT-Qm-Pd3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EKd-2F-SSs"/>
-                            <constraint firstItem="3aT-Qm-Pd3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="PLV-bA-GhI"/>
+                            <constraint firstItem="dgv-OW-dzD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="A9U-Dv-3o2"/>
+                            <constraint firstAttribute="trailing" secondItem="3aT-Qm-Pd3" secondAttribute="trailing" id="Cy5-U8-l7b"/>
+                            <constraint firstItem="3aT-Qm-Pd3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="EKd-2F-SSs"/>
+                            <constraint firstItem="3aT-Qm-Pd3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="PLV-bA-GhI"/>
                             <constraint firstItem="P6E-h9-iAL" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.64" id="XUj-s6-zL2"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dgv-OW-dzD" secondAttribute="trailing" id="gpQ-Iu-Dvp"/>
+                            <constraint firstAttribute="trailing" secondItem="dgv-OW-dzD" secondAttribute="trailing" id="gpQ-Iu-Dvp"/>
                             <constraint firstItem="XMS-rI-dkJ" firstAttribute="top" secondItem="P6E-h9-iAL" secondAttribute="bottom" constant="50" id="iIb-CL-nHI"/>
                             <constraint firstItem="P6E-h9-iAL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lLU-8P-sDD"/>
-                            <constraint firstItem="dgv-OW-dzD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mgr-sn-WIQ"/>
+                            <constraint firstItem="dgv-OW-dzD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="mgr-sn-WIQ"/>
                             <constraint firstItem="P6E-h9-iAL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oRp-vP-XqR"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dgv-OW-dzD" secondAttribute="bottom" id="r9Q-k3-vbB"/>
+                            <constraint firstAttribute="bottom" secondItem="dgv-OW-dzD" secondAttribute="bottom" id="r9Q-k3-vbB"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="btnBack" destination="ckc-x1-OHf" id="dnx-yS-si4"/>
                         <outlet property="btnCapture" destination="MpV-Ua-jFq" id="9id-6x-tXB"/>
                         <outlet property="btnReset" destination="tCS-IK-kcR" id="c1y-Az-VKd"/>
+                        <outlet property="imgBgCongrat" destination="LWP-BE-Jb1" id="aMZ-ZS-zIy"/>
                         <outlet property="imgSelfie" destination="BJl-5b-PDW" id="CTe-tn-0iU"/>
                         <outlet property="lbCongratBot" destination="S4V-2s-MZj" id="MAS-8S-AFI"/>
                         <outlet property="lbCongratTop" destination="Qgw-YF-hZM" id="fz7-mJ-4Hs"/>
                         <outlet property="vwBack" destination="opg-qk-C4Z" id="5SV-If-Nau"/>
+                        <outlet property="vwBgCongrat" destination="21F-YB-WSf" id="S6W-PU-jfh"/>
                         <outlet property="vwCapture" destination="xrN-j8-BPV" id="Cce-aG-E0t"/>
                         <outlet property="vwCenter" destination="P6E-h9-iAL" id="23s-AJ-9bh"/>
                         <outlet property="vwCongrat" destination="dgv-OW-dzD" id="P1B-em-5He"/>
@@ -432,6 +455,7 @@
     <resources>
         <image name="setting" width="512" height="512"/>
         <image name="share" width="512" height="512"/>
+        <image name="test" width="632" height="640"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
@@ -446,9 +470,6 @@
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

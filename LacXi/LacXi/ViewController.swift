@@ -28,6 +28,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var vwCapture: UIView!
     @IBOutlet weak var btnCapture: UIButton!
     
+    @IBOutlet weak var vwBgCongrat: UIView!
+    @IBOutlet weak var imgBgCongrat: UIImageView!
     @IBOutlet weak var vwBack: UIView!
     @IBOutlet weak var btnBack: UIButton!
     @IBOutlet weak var vwShare: UIView!
@@ -79,9 +81,29 @@ class ViewController: UIViewController {
             isCaptured = false
             vwSelfieImage.isHidden = false
             startRunningCaptureSession()
+            
         } else {
             let settings = AVCapturePhotoSettings()
             photoOutput?.capturePhoto(with: settings, delegate: self)
+            
+        }
+        
+    }
+    
+    @IBAction func shareTapped(_ sender: Any) {
+        vwBack.alpha = 0
+        vwCapture.alpha = 0
+        vwShare.alpha = 0
+        let secs = 0.1
+        DispatchQueue.main.asyncAfter(deadline: .now() + secs) {
+            let image = UIImage.init(view: self.view)
+            
+            let share = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+            self.present(share, animated: true) {
+                self.vwBack.alpha = 1
+                self.vwCapture.alpha = 1
+                self.vwShare.alpha = 1
+            }
         }
         
     }
@@ -133,6 +155,10 @@ class ViewController: UIViewController {
         hideCongrat()
         //reset layout
         
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent // .default
     }
 }
 
@@ -245,4 +271,16 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
             }
         }
     }
+}
+
+extension UIImage{
+    convenience init(view: UIView) {
+
+    UIGraphicsBeginImageContextWithOptions(view.bounds.size, view.isOpaque, 0.0)
+    view.drawHierarchy(in: view.bounds, afterScreenUpdates: false)
+    let image = UIGraphicsGetImageFromCurrentImageContext()
+    UIGraphicsEndImageContext()
+    self.init(cgImage: (image?.cgImage)!)
+
+  }
 }
