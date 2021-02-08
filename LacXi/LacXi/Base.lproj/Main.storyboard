@@ -81,9 +81,18 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P6E-h9-iAL">
                                 <rect key="frame" x="67.5" y="213.5" width="240" height="240"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mask" translatesAutoresizingMaskIntoConstraints="NO" id="qc2-CK-PE6">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemGrayColor"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="qc2-CK-PE6" secondAttribute="bottom" id="EXo-Fs-TX8"/>
+                                    <constraint firstItem="qc2-CK-PE6" firstAttribute="leading" secondItem="P6E-h9-iAL" secondAttribute="leading" id="PIZ-gr-GWM"/>
                                     <constraint firstAttribute="width" secondItem="P6E-h9-iAL" secondAttribute="height" id="Pxi-VV-Ryc"/>
+                                    <constraint firstItem="qc2-CK-PE6" firstAttribute="top" secondItem="P6E-h9-iAL" secondAttribute="top" id="hfM-Nx-CUh"/>
+                                    <constraint firstAttribute="trailing" secondItem="qc2-CK-PE6" secondAttribute="trailing" id="vvm-VU-xzx"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0wE-O0-iBa">
@@ -472,6 +481,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="mask" width="500" height="500"/>
         <image name="setting" width="512" height="512"/>
         <image name="shakeIcon" width="200" height="200"/>
         <image name="share" width="512" height="512"/>

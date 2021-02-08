@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2563331198C247F744A13645 /* Pods_LacXi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5CD85006D005634A972B61A /* Pods_LacXi.framework */; };
+		A33B5BCD25D14512002074F0 /* coinDrop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A33B5BCC25D14512002074F0 /* coinDrop.mp3 */; };
 		A38D5E2025CC00A500F9E9C0 /* stonecross.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A38D5E1F25CC00A500F9E9C0 /* stonecross.ttf */; };
 		A38D5E2425CC060F00F9E9C0 /* WasteOfTime.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A38D5E2325CC060F00F9E9C0 /* WasteOfTime.ttf */; };
 		A38D5E2825CC06EF00F9E9C0 /* UVNBanhMi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A38D5E2725CC06EF00F9E9C0 /* UVNBanhMi.ttf */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A33B5BCC25D14512002074F0 /* coinDrop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = coinDrop.mp3; sourceTree = "<group>"; };
 		A38D5E1F25CC00A500F9E9C0 /* stonecross.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = stonecross.ttf; sourceTree = "<group>"; };
 		A38D5E2325CC060F00F9E9C0 /* WasteOfTime.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = WasteOfTime.ttf; sourceTree = "<group>"; };
 		A38D5E2725CC06EF00F9E9C0 /* UVNBanhMi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = UVNBanhMi.ttf; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				A3F169BA25C7FFFA00A4AF11 /* SettingViewController.swift */,
 				A3F169D925C934ED00A4AF11 /* SingleTon.swift */,
 				A3F169DC25C935C300A4AF11 /* Enums.swift */,
+				A33B5BCC25D14512002074F0 /* coinDrop.mp3 */,
 			);
 			path = LacXi;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 				A3F169A725C4142700A4AF11 /* Assets.xcassets in Resources */,
 				A38D5E2825CC06EF00F9E9C0 /* UVNBanhMi.ttf in Resources */,
 				A38D5E2425CC060F00F9E9C0 /* WasteOfTime.ttf in Resources */,
+				A33B5BCD25D14512002074F0 /* coinDrop.mp3 in Resources */,
 				A3F169A525C4142400A4AF11 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -49,6 +49,8 @@ class ViewController: UIViewController {
     var cameraPreviewPlayer: AVCaptureVideoPreviewLayer?
     var image: UIImage?
     
+    var coinDropSound: AVAudioPlayer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLayout()
@@ -122,6 +124,15 @@ class ViewController: UIViewController {
             print("start")
             let temp = self.runRandom(minimum: minimum, maximum: maximum, type: type)
             DispatchQueue.main.asyncAfter(deadline: .now() + addTime(num: 5)) { // Change `2.0` to the desired number of seconds.
+                let path = Bundle.main.path(forResource: "coinDrop.mp3", ofType:nil)!
+                let url = URL(fileURLWithPath: path)
+
+                do {
+                    self.coinDropSound = try AVAudioPlayer(contentsOf: url)
+                    self.coinDropSound?.play()
+                } catch {
+                    // couldn't load file :(
+                }
                 
                 let strTop = "CHÚC MỪNG!!!"
                 let strBot = "Bạn đã nhận được\n\(temp)đ\ntừ Quang Trường"
