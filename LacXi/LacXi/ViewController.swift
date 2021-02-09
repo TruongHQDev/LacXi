@@ -265,7 +265,7 @@ extension ViewController {
         animationView = .init(name: "box")
         animationView?.frame = vwCenter.bounds
         animationView?.loopMode = .loop
-        animationView?.animationSpeed = 0.5
+        animationView?.animationSpeed = 1
 //        view.addSubview(animationView!)
 //        view.bringSubviewToFront(animationView!)
         vwCenter.addSubview(animationView!)

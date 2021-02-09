@@ -116,7 +116,7 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0wE-O0-iBa">
-                                <rect key="frame" x="162.5" y="550" width="50" height="50"/>
+                                <rect key="frame" x="162.5" y="530" width="50" height="50"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shakeIcon" translatesAutoresizingMaskIntoConstraints="NO" id="QnX-xX-ktQ">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -139,9 +139,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="21F-YB-WSf">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgShaked" translatesAutoresizingMaskIntoConstraints="NO" id="LWP-BE-Jb1">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgShaked" translatesAutoresizingMaskIntoConstraints="NO" id="LWP-BE-Jb1">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                                <color key="backgroundColor" red="0.58122211690000003" green="0.19867652650000001" blue="0.17880240080000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -297,7 +296,7 @@
                         <viewLayoutGuide key="safeArea" id="Qxj-dk-bWS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="0wE-O0-iBa" firstAttribute="top" secondItem="P6E-h9-iAL" secondAttribute="bottom" constant="20" id="34r-om-SzF"/>
+                            <constraint firstItem="0wE-O0-iBa" firstAttribute="top" secondItem="P6E-h9-iAL" secondAttribute="bottom" id="34r-om-SzF"/>
                             <constraint firstItem="XMS-rI-dkJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4gG-Ma-VSo"/>
                             <constraint firstItem="dgv-OW-dzD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="A9U-Dv-3o2"/>
                             <constraint firstAttribute="trailing" secondItem="3aT-Qm-Pd3" secondAttribute="trailing" id="Cy5-U8-l7b"/>
@@ -512,8 +511,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bg1" width="997" height="1886"/>
-        <image name="bgShaked" width="1529" height="2160"/>
+        <image name="bg1" width="1141" height="2160"/>
+        <image name="bgShaked" width="1526" height="2160"/>
         <image name="dot" width="512" height="512"/>
         <image name="mask" width="500" height="500"/>
         <image name="setting" width="512" height="512"/>
