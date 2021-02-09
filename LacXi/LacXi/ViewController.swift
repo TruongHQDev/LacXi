@@ -7,6 +7,7 @@
 
 import UIKit
 import AVFoundation
+import Lottie
 
 class ViewController: UIViewController {
     @IBOutlet weak var vwToSetting: UIView!
@@ -48,6 +49,7 @@ class ViewController: UIViewController {
     var photoOutput:     AVCapturePhotoOutput?
     var cameraPreviewPlayer: AVCaptureVideoPreviewLayer?
     var image: UIImage?
+    var animationView: AnimationView?
     
     var coinDropSound: AVAudioPlayer?
     
@@ -259,6 +261,16 @@ extension ViewController {
         vwSelfieImage.layer.cornerRadius = vwSelfieImage.frame.size.height / 2
         imgSelfie.frame = vwSelfieImage.frame
         imgSelfie.layer.cornerRadius = imgSelfie.frame.size.height / 2
+        
+        animationView = .init(name: "box")
+        animationView?.frame = vwCenter.bounds
+        animationView?.loopMode = .loop
+        animationView?.animationSpeed = 0.5
+//        view.addSubview(animationView!)
+//        view.bringSubviewToFront(animationView!)
+        vwCenter.addSubview(animationView!)
+        animationView?.play()
+//        vwCenter.bringSubviewToFront(animationView!)
     }
 }
 

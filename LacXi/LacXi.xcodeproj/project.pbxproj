@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2563331198C247F744A13645 /* Pods_LacXi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5CD85006D005634A972B61A /* Pods_LacXi.framework */; };
 		A33B5BCD25D14512002074F0 /* coinDrop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A33B5BCC25D14512002074F0 /* coinDrop.mp3 */; };
+		A376477625D26E0B00ADD10D /* box.json in Resources */ = {isa = PBXBuildFile; fileRef = A376477525D26E0A00ADD10D /* box.json */; };
 		A38D5E2025CC00A500F9E9C0 /* stonecross.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A38D5E1F25CC00A500F9E9C0 /* stonecross.ttf */; };
 		A38D5E2425CC060F00F9E9C0 /* WasteOfTime.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A38D5E2325CC060F00F9E9C0 /* WasteOfTime.ttf */; };
 		A38D5E2825CC06EF00F9E9C0 /* UVNBanhMi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A38D5E2725CC06EF00F9E9C0 /* UVNBanhMi.ttf */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		A33B5BCC25D14512002074F0 /* coinDrop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = coinDrop.mp3; sourceTree = "<group>"; };
+		A376477525D26E0A00ADD10D /* box.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = box.json; sourceTree = "<group>"; };
 		A38D5E1F25CC00A500F9E9C0 /* stonecross.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = stonecross.ttf; sourceTree = "<group>"; };
 		A38D5E2325CC060F00F9E9C0 /* WasteOfTime.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = WasteOfTime.ttf; sourceTree = "<group>"; };
 		A38D5E2725CC06EF00F9E9C0 /* UVNBanhMi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = UVNBanhMi.ttf; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				A3F169A625C4142700A4AF11 /* Assets.xcassets */,
 				A3F169A825C4142700A4AF11 /* LaunchScreen.storyboard */,
 				A3F169AB25C4142700A4AF11 /* Info.plist */,
+				A376477525D26E0A00ADD10D /* box.json */,
 				A3F169A125C4142400A4AF11 /* ViewController.swift */,
 				A3F169BA25C7FFFA00A4AF11 /* SettingViewController.swift */,
 				A3F169D925C934ED00A4AF11 /* SingleTon.swift */,
@@ -131,6 +134,7 @@
 				A3F1699625C4142300A4AF11 /* Sources */,
 				A3F1699725C4142300A4AF11 /* Frameworks */,
 				A3F1699825C4142300A4AF11 /* Resources */,
+				3EB2CB0CCA441831AE0E2D79 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -179,6 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3F169AA25C4142700A4AF11 /* LaunchScreen.storyboard in Resources */,
+				A376477625D26E0B00ADD10D /* box.json in Resources */,
 				A38D5E2025CC00A500F9E9C0 /* stonecross.ttf in Resources */,
 				A3F169A725C4142700A4AF11 /* Assets.xcassets in Resources */,
 				A38D5E2825CC06EF00F9E9C0 /* UVNBanhMi.ttf in Resources */,
@@ -191,6 +196,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3EB2CB0CCA441831AE0E2D79 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LacXi/Pods-LacXi-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LacXi/Pods-LacXi-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LacXi/Pods-LacXi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		72A4221B04D2282188B20062 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

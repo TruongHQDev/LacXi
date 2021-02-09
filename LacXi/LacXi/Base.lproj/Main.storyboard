@@ -71,7 +71,7 @@
                                 </constraints>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XMS-rI-dkJ">
-                                <rect key="frame" x="112.5" y="503.5" width="150" height="50"/>
+                                <rect key="frame" x="112.5" y="580" width="150" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCS-IK-kcR">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
@@ -95,13 +95,13 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P6E-h9-iAL">
-                                <rect key="frame" x="67.5" y="213.5" width="240" height="240"/>
+                                <rect key="frame" x="-37.5" y="80" width="450" height="450"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mask" translatesAutoresizingMaskIntoConstraints="NO" id="qc2-CK-PE6">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="qc2-CK-PE6" secondAttribute="bottom" id="EXo-Fs-TX8"/>
                                     <constraint firstItem="qc2-CK-PE6" firstAttribute="leading" secondItem="P6E-h9-iAL" secondAttribute="leading" id="PIZ-gr-GWM"/>
@@ -109,9 +109,14 @@
                                     <constraint firstItem="qc2-CK-PE6" firstAttribute="top" secondItem="P6E-h9-iAL" secondAttribute="top" id="hfM-Nx-CUh"/>
                                     <constraint firstAttribute="trailing" secondItem="qc2-CK-PE6" secondAttribute="trailing" id="vvm-VU-xzx"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="qc2-CK-PE6"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0wE-O0-iBa">
-                                <rect key="frame" x="162.5" y="473.5" width="50" height="50"/>
+                                <rect key="frame" x="162.5" y="550" width="50" height="50"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shakeIcon" translatesAutoresizingMaskIntoConstraints="NO" id="QnX-xX-ktQ">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -298,14 +303,14 @@
                             <constraint firstAttribute="trailing" secondItem="3aT-Qm-Pd3" secondAttribute="trailing" id="Cy5-U8-l7b"/>
                             <constraint firstItem="3aT-Qm-Pd3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="EKd-2F-SSs"/>
                             <constraint firstItem="3aT-Qm-Pd3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="PLV-bA-GhI"/>
-                            <constraint firstItem="P6E-h9-iAL" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.64" id="XUj-s6-zL2"/>
+                            <constraint firstItem="P6E-h9-iAL" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1.2" id="XUj-s6-zL2"/>
                             <constraint firstItem="Chf-8G-No0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dbs-Ge-bVd"/>
                             <constraint firstAttribute="trailing" secondItem="dgv-OW-dzD" secondAttribute="trailing" id="gpQ-Iu-Dvp"/>
+                            <constraint firstItem="P6E-h9-iAL" firstAttribute="top" secondItem="3aT-Qm-Pd3" secondAttribute="bottom" constant="30" id="hNz-IR-qOo"/>
                             <constraint firstItem="XMS-rI-dkJ" firstAttribute="top" secondItem="P6E-h9-iAL" secondAttribute="bottom" constant="50" id="iIb-CL-nHI"/>
                             <constraint firstAttribute="bottom" secondItem="Chf-8G-No0" secondAttribute="bottom" id="jKH-zc-2tL"/>
                             <constraint firstItem="0wE-O0-iBa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kWB-kJ-i1P"/>
                             <constraint firstAttribute="trailing" secondItem="Chf-8G-No0" secondAttribute="trailing" id="kgZ-Ii-ob2"/>
-                            <constraint firstItem="P6E-h9-iAL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lLU-8P-sDD"/>
                             <constraint firstItem="dgv-OW-dzD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="mgr-sn-WIQ"/>
                             <constraint firstItem="P6E-h9-iAL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oRp-vP-XqR"/>
                             <constraint firstAttribute="bottom" secondItem="dgv-OW-dzD" secondAttribute="bottom" id="r9Q-k3-vbB"/>
@@ -522,9 +527,6 @@
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
