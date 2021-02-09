@@ -6,5 +6,6 @@ target 'LacXi' do
   use_frameworks!
 
   # Pods for LacXi
+pod 'lottie-ios'
 
 end
