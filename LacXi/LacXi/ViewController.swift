@@ -128,6 +128,7 @@ class ViewController: UIViewController {
         if motion == .motionShake {
             if isShaking { return }
 //            print("start")
+            isShaking = true
             let temp = self.runRandom(minimum: minimum, maximum: maximum, type: type)
             DispatchQueue.main.asyncAfter(deadline: .now() + addTime(num: Double.random(in: 2...12) )) { // Change `2.0` to the desired number of seconds.
                 
@@ -275,6 +276,7 @@ extension ViewController {
 //        view.bringSubviewToFront(animationView!)
         vwCenter.addSubview(animationView!)
         animationView?.play()
+//        animationView?.pause()
 //        vwCenter.bringSubviewToFront(animationView!)
     }
 }
