@@ -113,6 +113,7 @@ class ViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        animationView?.play()
         startRunningCaptureSession()
     }
     
@@ -130,7 +131,7 @@ class ViewController: UIViewController {
 //            print("start")
             isShaking = true
             let temp = self.runRandom(minimum: minimum, maximum: maximum, type: type)
-            DispatchQueue.main.asyncAfter(deadline: .now() + addTime(num: Double.random(in: 2...12) )) { // Change `2.0` to the desired number of seconds.
+            DispatchQueue.main.asyncAfter(deadline: .now() + addTime(num: Double.random(in: 2...7) )) { // Change `2.0` to the desired number of seconds.
                 
                 let path = Bundle.main.path(forResource: "coinDrop.mp3", ofType:nil)!
                 let url = URL(fileURLWithPath: path)

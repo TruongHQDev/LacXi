@@ -184,7 +184,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wLa-iT-gFZ" userLabel="MoneyResult">
-                                        <rect key="frame" x="67.5" y="430" width="240" height="200"/>
+                                        <rect key="frame" x="67.5" y="410" width="240" height="200"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S4V-2s-MZj">
                                                 <rect key="frame" x="0.0" y="0.0" width="240" height="200"/>
@@ -288,7 +288,7 @@
                                     <constraint firstItem="21F-YB-WSf" firstAttribute="leading" secondItem="dgv-OW-dzD" secondAttribute="leading" id="bkn-X9-jUM"/>
                                     <constraint firstAttribute="trailing" secondItem="Xwi-c2-cQL" secondAttribute="trailing" constant="20" id="kIz-Tb-rmC"/>
                                     <constraint firstItem="wLa-iT-gFZ" firstAttribute="centerX" secondItem="dgv-OW-dzD" secondAttribute="centerX" id="r65-tb-xa6"/>
-                                    <constraint firstItem="wLa-iT-gFZ" firstAttribute="top" secondItem="Rmm-RP-maB" secondAttribute="bottom" constant="20" id="uDK-NV-cJM"/>
+                                    <constraint firstItem="wLa-iT-gFZ" firstAttribute="top" secondItem="Rmm-RP-maB" secondAttribute="bottom" id="uDK-NV-cJM"/>
                                     <constraint firstAttribute="trailing" secondItem="21F-YB-WSf" secondAttribute="trailing" id="vHg-Fc-BVB"/>
                                 </constraints>
                             </view>
@@ -332,7 +332,7 @@
                         <outlet property="vwLbCongrat" destination="Bp4-3T-Is6" id="vyz-wH-8aG"/>
                         <outlet property="vwMoneyResultt" destination="wLa-iT-gFZ" id="e9n-yj-4cL"/>
                         <outlet property="vwReset" destination="XMS-rI-dkJ" id="JsB-D3-cnL"/>
-                        <outlet property="vwSelfieImage" destination="Rmm-RP-maB" id="ne3-Bd-PlI"/>
+                        <outlet property="vwSelfieImage" destination="Rmm-RP-maB" id="h0d-pI-8b1"/>
                         <outlet property="vwShare" destination="Xwi-c2-cQL" id="P7I-8p-ocH"/>
                         <outlet property="vwToSetting" destination="IW1-Bh-Vga" id="TyE-u3-HER"/>
                     </connections>
