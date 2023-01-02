@@ -2,14 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>need to save image</string>
-	<key>UIAppFonts</key>
-	<array>
-		<string>stonecross.ttf</string>
-		<string>WasteOfTime.ttf</string>
-		<string>UVNBanhMi.ttf</string>
-	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -30,8 +22,16 @@
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>Need to take Photos</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>need to save image</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Need to add Photos</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>stonecross.ttf</string>
+		<string>WasteOfTime.ttf</string>
+		<string>UVNBanhMi.ttf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
