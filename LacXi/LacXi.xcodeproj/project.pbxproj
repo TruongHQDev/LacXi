@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2563331198C247F744A13645 /* Pods_LacXi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5CD85006D005634A972B61A /* Pods_LacXi.framework */; };
+		7B21C92B2971D9E400B4F0E2 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B21C92A2971D9E400B4F0E2 /* CameraViewController.swift */; };
 		A33B5BCD25D14512002074F0 /* coinDrop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A33B5BCC25D14512002074F0 /* coinDrop.mp3 */; };
 		A376477625D26E0B00ADD10D /* box.json in Resources */ = {isa = PBXBuildFile; fileRef = A376477525D26E0A00ADD10D /* box.json */; };
 		A38D5E2025CC00A500F9E9C0 /* stonecross.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A38D5E1F25CC00A500F9E9C0 /* stonecross.ttf */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B21C92A2971D9E400B4F0E2 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		A33B5BCC25D14512002074F0 /* coinDrop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = coinDrop.mp3; sourceTree = "<group>"; };
 		A376477525D26E0A00ADD10D /* box.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = box.json; sourceTree = "<group>"; };
 		A38D5E1F25CC00A500F9E9C0 /* stonecross.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = stonecross.ttf; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				A376477525D26E0A00ADD10D /* box.json */,
 				A3F169A125C4142400A4AF11 /* ViewController.swift */,
 				A3F169BA25C7FFFA00A4AF11 /* SettingViewController.swift */,
+				7B21C92A2971D9E400B4F0E2 /* CameraViewController.swift */,
 				A3F169D925C934ED00A4AF11 /* SingleTon.swift */,
 				A3F169DC25C935C300A4AF11 /* Enums.swift */,
 				A33B5BCC25D14512002074F0 /* coinDrop.mp3 */,
@@ -246,6 +249,7 @@
 				A3F1699E25C4142400A4AF11 /* AppDelegate.swift in Sources */,
 				A3F169A025C4142400A4AF11 /* SceneDelegate.swift in Sources */,
 				A3F169DA25C934ED00A4AF11 /* SingleTon.swift in Sources */,
+				7B21C92B2971D9E400B4F0E2 /* CameraViewController.swift in Sources */,
 				A3F169DD25C935C300A4AF11 /* Enums.swift in Sources */,
 				A3F169BB25C7FFFA00A4AF11 /* SettingViewController.swift in Sources */,
 			);

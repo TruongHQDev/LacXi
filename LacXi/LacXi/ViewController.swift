@@ -19,15 +19,13 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var vwCongrat: UIView!
     @IBOutlet weak var vwLbCongrat: UIView!
-    @IBOutlet weak var vwSelfieImage: UIView!
     @IBOutlet weak var imgSelfie: UIImageView!
+    @IBOutlet weak var vwSelfieImage: UIView!
+    @IBOutlet weak var btnOpenCamera: UIButton!
     
     @IBOutlet weak var vwMoneyResultt: UIView!
     @IBOutlet weak var lbCongratTop: UILabel!
     @IBOutlet weak var lbCongratBot: UILabel!
-    
-    @IBOutlet weak var vwCapture: UIView!
-    @IBOutlet weak var btnCapture: UIButton!
     
     @IBOutlet weak var vwBgCongrat: UIView!
     @IBOutlet weak var imgBgCongrat: UIImageView!
@@ -40,15 +38,6 @@ class ViewController: UIViewController {
     var type: RandomType = .even
     var isShaking = false
     var isCaptured = false
-    
-    var captureSession = AVCaptureSession()
-    var backCamera:      AVCaptureDevice?
-    var frontCamera:     AVCaptureDevice?
-    var currentCamera:   AVCaptureDevice?
-    
-    var photoOutput:     AVCapturePhotoOutput?
-    var cameraPreviewPlayer: AVCaptureVideoPreviewLayer?
-    var image: UIImage?
     var animationView: AnimationView?
     
     var coinDropSound: AVAudioPlayer?
@@ -56,10 +45,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLayout()
-        setupCaptureSession()
-        setupDevice()
-        setupInputOutput()
-        setupPreviewPlayer()
     }
     
     @IBAction func resetTapped(_ sender: Any) {
@@ -79,24 +64,18 @@ class ViewController: UIViewController {
         resetToShake()
     }
     
-    @IBAction func captureTapped(_ sender: Any) {
-        if isCaptured {
-            imgSelfie.image = UIImage(named: "")
-            isCaptured = false
-            vwSelfieImage.isHidden = false
-            startRunningCaptureSession()
-            
-        } else {
-            let settings = AVCapturePhotoSettings()
-            photoOutput?.capturePhoto(with: settings, delegate: self)
-            
-        }
+    @IBAction func openCameraTapped(_ sender: Any) {
+        //Show CameraController
+        _ = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard?.instantiateViewController(withIdentifier: "CameraViewController") as! CameraViewController
+        controller.modalPresentationStyle = .overCurrentContext
+        controller.delegate = self
+        self.present(controller, animated: true, completion: nil)
         
     }
     
     @IBAction func shareTapped(_ sender: Any) {
         vwBack.alpha = 0
-        vwCapture.alpha = 0
         vwShare.alpha = 0
         let secs = 0.1
         DispatchQueue.main.asyncAfter(deadline: .now() + secs) {
@@ -105,24 +84,17 @@ class ViewController: UIViewController {
             let share = UIActivityViewController(activityItems: [image], applicationActivities: nil)
             self.present(share, animated: true) {
                 self.vwBack.alpha = 1
-                self.vwCapture.alpha = 1
                 self.vwShare.alpha = 1
             }
         }
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         animationView?.play()
-        startRunningCaptureSession()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         animationView?.play()
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        stopRunningCaptureSession()
     }
     
     override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
@@ -199,114 +171,36 @@ extension ViewController: SettingDelegate {
         isShaking = false
         isCaptured = false
         imgSelfie.image = UIImage(named: "")
-        
-        
     }
     
     func showCongrat() {
         vwCongrat.alpha = 1
         isShaking = true
-        vwSelfieImage.isHidden = false
-        startRunningCaptureSession()
+
     }
 }
 
 extension ViewController {
-    func setupCaptureSession() {
-        captureSession.sessionPreset = AVCaptureSession.Preset.photo
-    }
-
-    func setupDevice() {
-        let deviceDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [AVCaptureDevice.DeviceType.builtInWideAngleCamera], mediaType: AVMediaType.video, position: AVCaptureDevice.Position.unspecified)
-        let devices = deviceDiscoverySession.devices
-        
-        for device in devices {
-            if device.position == AVCaptureDevice.Position.back {
-                backCamera = device
-            } else if device.position == AVCaptureDevice.Position.front {
-                frontCamera = device
-            }
-        }
-        
-        currentCamera = frontCamera
-    }
-    
-    func setupInputOutput() {
-        do {
-            let captureDeviceInput = try AVCaptureDeviceInput(device: currentCamera!)
-            captureSession.addInput(captureDeviceInput)
-            photoOutput = AVCapturePhotoOutput()
-            photoOutput?.setPreparedPhotoSettingsArray([AVCapturePhotoSettings(format: [AVVideoCodecKey: AVVideoCodecType.jpeg])], completionHandler: nil)
-            captureSession.addOutput(photoOutput!)
-            
-        } catch {
-            print(error)
-        }
-    }
-    
-    func setupPreviewPlayer() {
-        cameraPreviewPlayer = AVCaptureVideoPreviewLayer(session: captureSession)
-        cameraPreviewPlayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
-        cameraPreviewPlayer?.connection?.videoOrientation = AVCaptureVideoOrientation.portrait
-        cameraPreviewPlayer?.frame = vwSelfieImage.bounds
-        self.vwSelfieImage.layer.insertSublayer(cameraPreviewPlayer!, at: 0)
-    }
-    
-    func startRunningCaptureSession() {
-        captureSession.startRunning()
-    }
-    
-    func stopRunningCaptureSession() {
-        captureSession.stopRunning()
-    }
-    
-    func hidePreviewLayer() {
-        vwSelfieImage.layer.isHidden = true
-    }
-    
     func setupLayout() {
-        vwSelfieImage.layer.cornerRadius = vwSelfieImage.frame.size.height / 2
-        imgSelfie.frame = vwSelfieImage.frame
         imgSelfie.layer.cornerRadius = imgSelfie.frame.size.height / 2
-        
+        //Box Animation
         animationView = .init(name: "box")
         animationView?.frame = vwCenter.bounds
         animationView?.loopMode = .loop
         animationView?.animationSpeed = 1
-//        view.addSubview(animationView!)
-//        view.bringSubviewToFront(animationView!)
         vwCenter.addSubview(animationView!)
         animationView?.play()
-//        animationView?.pause()
-//        vwCenter.bringSubviewToFront(animationView!)
     }
 }
 
-extension ViewController: AVCapturePhotoCaptureDelegate {
-    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
-        stopRunningCaptureSession()
-        if let imageData = photo.fileDataRepresentation() {
-            if currentCamera!.position == AVCaptureDevice.Position.front {
-//                let img = UIImage(cgImage: <#T##CGImage#>, scale: <#T##CGFloat#>, orientation: <#T##UIImage.Orientation#>)
-                image = UIImage(data: imageData)
-//                image = UIImage(cgImage: , scale: UIScreen.main.scale, orientation: .leftMirrored)
-//                image?.imageOrientation.rawValue
-            } else {
-                image = UIImage(data: imageData)
-            }
-            
-            isCaptured = true
-            DispatchQueue.main.async {
-                self.imgSelfie.image = self.image
-                self.vwSelfieImage.isHidden = true
-            }
-        }
+extension ViewController: CameraViewControllerDelegate {
+    func sendImage(image: UIImage) {
+        self.imgSelfie.image = image
     }
 }
 
 extension UIImage{
     convenience init(view: UIView) {
-
     UIGraphicsBeginImageContextWithOptions(view.bounds.size, view.isOpaque, 0.0)
     view.drawHierarchy(in: view.bounds, afterScreenUpdates: false)
     let image = UIGraphicsGetImageFromCurrentImageContext()
