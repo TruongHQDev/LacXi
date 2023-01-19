@@ -41,6 +41,16 @@ class ViewController: UIViewController {
     var animationView: AnimationView?
     
     var coinDropSound: AVAudioPlayer?
+    var isCapturedImage = false {
+        didSet {
+            if isCapturedImage {
+                self.btnOpenCamera.setImage(nil, for: .normal)
+            } else {
+                self.btnOpenCamera.setImage(UIImage(named: "iconLibraryDefault"), for: .normal)
+            }
+        }
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -170,13 +180,13 @@ extension ViewController: SettingDelegate {
         lbCongratTop.text = ""
         isShaking = false
         isCaptured = false
-        imgSelfie.image = UIImage(named: "")
+        imgSelfie.image = nil
     }
     
     func showCongrat() {
         vwCongrat.alpha = 1
         isShaking = true
-
+        isCapturedImage = false
     }
 }
 
@@ -196,6 +206,7 @@ extension ViewController {
 extension ViewController: CameraViewControllerDelegate {
     func sendImage(image: UIImage) {
         self.imgSelfie.image = image
+        isCapturedImage = true
     }
 }
 
