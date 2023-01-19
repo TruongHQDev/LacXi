@@ -125,9 +125,9 @@ class ViewController: UIViewController {
                     // couldn't load file :(
                 }
                 
-                let strTop = "CHÚC MỪNG!!!"
+//                let strTop = "CHÚC MỪNG!!!"
                 let strBot = "Bạn đã nhận được\n\(temp)đ\ntừ Quang Trường"
-                self.lbCongratTop.text = strTop
+                self.lbCongratTop.text = ""
                 self.lbCongratBot.text = strBot
                 self.showCongrat()
             }
