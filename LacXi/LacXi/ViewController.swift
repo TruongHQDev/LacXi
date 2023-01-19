@@ -110,9 +110,8 @@ class ViewController: UIViewController {
     override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
             if isShaking { return }
-//            print("start")
             isShaking = true
-            let temp = self.runRandom(minimum: minimum, maximum: maximum, type: type)
+            let moneyValue = self.runRandom(minimum: minimum, maximum: maximum, type: type)
             DispatchQueue.main.asyncAfter(deadline: .now() + addTime(num: Double.random(in: 2...7) )) { // Change `2.0` to the desired number of seconds.
                 
                 let path = Bundle.main.path(forResource: "coinDrop.mp3", ofType:nil)!
@@ -125,9 +124,7 @@ class ViewController: UIViewController {
                     // couldn't load file :(
                 }
                 
-//                let strTop = "CHÚC MỪNG!!!"
-                let strBot = "Bạn đã nhận được\n\(temp)đ\ntừ Quang Trường"
-                self.lbCongratTop.text = ""
+                let strBot = "Bạn đã nhận được\n\(self.convertCurrency(money: Double(moneyValue)))đ\ntừ Quang Trường"
                 self.lbCongratBot.text = strBot
                 self.showCongrat()
             }
@@ -156,8 +153,20 @@ class ViewController: UIViewController {
     func resetToShake() {
         hideCongrat()
         //reset layout
-        
     }
+    
+    func convertCurrency(money: Double) -> String {
+        let currencyFormatter = NumberFormatter()
+        currencyFormatter.usesGroupingSeparator = true
+        currencyFormatter.numberStyle = .decimal
+        // localize to your grouping and decimal separator
+        currencyFormatter.locale = Locale.current
+
+        // We'll force unwrap with the !, if you've got defined data you may need more error checking
+        let priceString = currencyFormatter.string(from: NSNumber(value: money))!
+        return priceString
+    }
+    
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent // .default
