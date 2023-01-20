@@ -86,12 +86,10 @@ class ViewController: UIViewController {
     
     @IBAction func shareTapped(_ sender: Any) {
         self.hideControl()
-        
-        //Save Congratulatiin view to camera roll
-        let image = UIImage.init(view: self.view)
-        UIImageWriteToSavedPhotosAlbum(image, #selector(self.showControl), nil, nil)
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            //Save Congratulatiin view to camera roll
+            let image = UIImage.init(view: self.view)
+            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
             self.showControl()
         }
     }
@@ -99,11 +97,13 @@ class ViewController: UIViewController {
     @objc func hideControl() {
         vwBack.alpha = 0
         vwShare.alpha = 0
+        vwToSetting.alpha = 0
     }
     
     @objc func showControl() {
         vwBack.alpha = 1
         vwShare.alpha = 1
+        vwToSetting.alpha = 1
     }
     
     override func viewWillAppear(_ animated: Bool) {

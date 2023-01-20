@@ -47,9 +47,9 @@
                                         <rect key="frame" x="354" y="55" width="40" height="40"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LOE-rO-SZu">
-                                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
-                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" image="setting"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="40.5"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" backgroundImage="gear" catalog="system"/>
                                                 <connections>
                                                     <action selector="settingTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j9E-fK-ept"/>
                                                 </connections>
@@ -132,7 +132,6 @@
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="BJl-5b-PDW" secondAttribute="trailing" constant="10" id="Jfd-B8-SvY"/>
                                             <constraint firstItem="BJl-5b-PDW" firstAttribute="leading" secondItem="Rmm-RP-maB" secondAttribute="leading" constant="10" id="Pl1-6Q-pRQ"/>
-                                            <constraint firstAttribute="width" constant="220" id="S1a-gj-iHu"/>
                                             <constraint firstAttribute="bottom" secondItem="BJl-5b-PDW" secondAttribute="bottom" constant="10" id="XD6-RL-YJZ"/>
                                             <constraint firstAttribute="width" secondItem="Rmm-RP-maB" secondAttribute="height" id="i3k-HS-t5V"/>
                                             <constraint firstItem="BJl-5b-PDW" firstAttribute="top" secondItem="Rmm-RP-maB" secondAttribute="top" constant="10" id="j6z-09-nVg"/>
@@ -258,6 +257,7 @@
                                     <constraint firstItem="Bp4-3T-Is6" firstAttribute="centerX" secondItem="dgv-OW-dzD" secondAttribute="centerX" id="SIB-gW-L3f"/>
                                     <constraint firstAttribute="bottom" secondItem="opg-qk-C4Z" secondAttribute="bottom" constant="25" id="TAG-YW-Qoi"/>
                                     <constraint firstItem="Rmm-RP-maB" firstAttribute="top" secondItem="Bp4-3T-Is6" secondAttribute="bottom" constant="20" id="ZV3-eO-ces"/>
+                                    <constraint firstItem="Rmm-RP-maB" firstAttribute="width" secondItem="dgv-OW-dzD" secondAttribute="width" multiplier="0.531401" id="aHx-cc-lIf"/>
                                     <constraint firstItem="21F-YB-WSf" firstAttribute="leading" secondItem="dgv-OW-dzD" secondAttribute="leading" id="bkn-X9-jUM"/>
                                     <constraint firstItem="MpV-Ua-jFq" firstAttribute="trailing" secondItem="Rmm-RP-maB" secondAttribute="trailing" id="cKP-lX-dgo"/>
                                     <constraint firstItem="Rmm-RP-maB" firstAttribute="centerX" secondItem="dgv-OW-dzD" secondAttribute="centerX" id="hT5-TV-YHX"/>
@@ -669,11 +669,11 @@
         <image name="arrowshape.turn.up.left" catalog="system" width="128" height="104"/>
         <image name="background2023" width="1220" height="1726"/>
         <image name="bg2023" width="3543" height="4961"/>
+        <image name="gear" catalog="system" width="128" height="122"/>
         <image name="iconClose" width="91" height="91"/>
         <image name="iconLibrary" width="96" height="96"/>
         <image name="iconSwitch" width="96" height="96"/>
         <image name="mask" width="500" height="500"/>
-        <image name="setting" width="512" height="512"/>
         <image name="square.and.arrow.down" catalog="system" width="121" height="128"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
