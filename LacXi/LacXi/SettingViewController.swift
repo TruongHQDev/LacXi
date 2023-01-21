@@ -17,6 +17,9 @@ class SettingViewController: UIViewController {
     @IBOutlet weak var vwMaximumSetting: UIView!
     @IBOutlet weak var txtMaximum: UITextField!
     
+    @IBOutlet weak var vwCongratTitle: UIView!
+    @IBOutlet weak var lbDescriptionCongrat: UILabel!
+    
     @IBOutlet weak var vwTypeRandom: UIView!
     @IBOutlet weak var segmentTypeRandom: UISegmentedControl!
     

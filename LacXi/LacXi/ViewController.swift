@@ -41,6 +41,7 @@ class ViewController: UIViewController {
     var animationView: AnimationView?
     
     var coinDropSound: AVAudioPlayer?
+    var backgroundAudio: AVAudioPlayer = AVAudioPlayer()
     var isCapturedImage = false {
         didSet {
             if isCapturedImage {
@@ -55,6 +56,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLayout()
+        setupBackgroundAudio()
     }
     
     @IBAction func resetTapped(_ sender: Any) {
@@ -108,6 +110,7 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         animationView?.play()
+        self.backgroundAudio.play()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -125,6 +128,9 @@ class ViewController: UIViewController {
                 let url = URL(fileURLWithPath: path)
 
                 do {
+                    //Stop background
+                    self.backgroundAudio.stop()
+                    //Play coid drop
                     self.coinDropSound = try AVAudioPlayer(contentsOf: url)
                     self.coinDropSound?.play()
                 } catch {
@@ -197,6 +203,8 @@ extension ViewController: SettingDelegate {
         isShaking = false
         isCaptured = false
         imgSelfie.image = nil
+        animationView?.play()
+        self.backgroundAudio.play()
     }
     
     func showCongrat() {
@@ -216,6 +224,17 @@ extension ViewController {
         animationView?.animationSpeed = 1
         vwCenter.addSubview(animationView!)
         animationView?.play()
+    }
+    
+    func setupBackgroundAudio() {
+        do {
+            let path = Bundle.main.path(forResource: "nhacXoSo.mp3", ofType:nil)!
+            let url = URL(fileURLWithPath: path)
+            self.backgroundAudio = try AVAudioPlayer(contentsOf: url)
+            self.backgroundAudio.numberOfLoops = -1
+        } catch {
+            // couldn't load file :(
+        }
     }
 }
 
