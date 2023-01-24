@@ -137,7 +137,7 @@ class ViewController: UIViewController {
                     // couldn't load file :(
                 }
                 
-                let strBot = "Bạn đã nhận được\n\(self.convertCurrency(money: Double(moneyValue)))đ\ntừ Quang Trường"
+                let strBot = "Nhận được lộc\n\(self.convertCurrency(money: Double(moneyValue)))đ\ntừ Phúc Đáng Iu 💗"
                 self.lbCongratBot.text = strBot
                 self.showCongrat()
             }
